@@ -1,17 +1,11 @@
 import { useState } from 'react';
 import './App.css'
 import Escena from './components/escenas/Escena'
+import Bienvenida from './components/escenas/welcome'
+import FondoImagenes from './components/escenas/fondoImagenes';
+import { imagenes } from './components/escenas/imagenes';
 import frases from './components/frases/frases.json'
 import {ButtonsSelector} from "./components/styled-components/styled-div";
-import FondoImagenes from './components/styled-components/fondoImagenes';
-import Bienvenida from './components/escenas/welcome'
-
-const imagenesFondo = [
-  '1.jpg',
-  '2.jpg',
-  '3.jpg',
-  '4.jpg'
-];
 
 const App = () => {
   const [indiceFraseResaltada, setIndiceFraseResaltada] = useState(0);
@@ -31,9 +25,9 @@ const App = () => {
 
   return (
     <>
-      <FondoImagenes indiceImagen={indiceFraseResaltada} imagenes={imagenesFondo} />
-      <ButtonsSelector onClick={handleAnteriorClick}>Anterior</ButtonsSelector>
-      <ButtonsSelector onClick={handleSiguienteClick}>Siguiente</ButtonsSelector>
+      <FondoImagenes indiceImagen={indiceFraseResaltada} imagenes={imagenes} />
+      <ButtonsSelector onClick={handleAnteriorClick}>Previous</ButtonsSelector>
+      <ButtonsSelector onClick={handleSiguienteClick}>Next</ButtonsSelector>
       <Escena frases={frases} indiceFraseResaltada={indiceFraseResaltada} />
     </>
   );

@@ -1,4 +1,4 @@
-import {StyledDiv} from "../styled-components/styled-div";
+import { StyledDiv } from "../styled-components/styled-div";
 
 type Frase = {
   id: number;
@@ -10,7 +10,7 @@ type EscenaProps = {
   indiceFraseResaltada: number;
 };
 
-const Escena = (props: EscenaProps) => {
+export const Escena = (props: EscenaProps) => {
   const listItems = props.frases.map((frase, index) => (
     <StyledDiv key={frase.id} resaltado={index === props.indiceFraseResaltada}>
       {frase.text}
@@ -20,7 +20,6 @@ const Escena = (props: EscenaProps) => {
 };
 
 export default Escena;
-
 
 /* interface Frase {
   id: number;
