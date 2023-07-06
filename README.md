@@ -15,5 +15,5 @@ A client whose main product is a business management website developed with Reac
 <a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" /></a>
 </p>
 
-Deployment: https://ferransr.github.io/Sprint6/
+Deployment: https://ferransr.github.io/Sprint6/dist/assets/
 
