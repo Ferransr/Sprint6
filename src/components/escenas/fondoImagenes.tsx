@@ -11,7 +11,7 @@ const FondoImagenes = (props: FondoImagenesProps) => {
 
   useEffect(() => {
     const imagenFondo = imagenes[indiceImagen % imagenes.length];
-    document.body.style.backgroundImage = `url(src/assets/img/${imagenFondo})`;
+    document.body.style.backgroundImage = `url(./assets/img/${imagenFondo})`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
