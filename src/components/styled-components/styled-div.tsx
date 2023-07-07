@@ -18,13 +18,11 @@ export const StyledDiv = styled.div<StyledDivProps>`
   margin-bottom: 1.5em;
   padding: 0 1em;
   background-color: ${(props) => (props.resaltado ? "salmon" : "#eaeaea")};
-  cursor: pointer;
-  /* opacity: ${(props) => (props.resaltado ? 1 : 0.5)}; */
+  opacity: ${(props) => (props.resaltado ? 1 : 0.5)};
 `;
 
 export const ButtonsSelector = styled.button`
   justify-content: center;
-
   color: black;
   background-color: #eaeaea;
   width: 140px;
@@ -34,9 +32,13 @@ export const ButtonsSelector = styled.button`
   margin-bottom: 1.5em;
   margin-inline: 0.5em;
   border: solid 3px;
-  border-color: black;
   border-radius: 0.5em;
   cursor: pointer;
+
+  &:hover {
+    background-color: salmon;
+    color: white;
+  }
 `;
 
 export const Contenedor = styled.div`
@@ -75,6 +77,12 @@ export const ButtonWelcome = styled.button`
   width: 150px;
   height: 50px;
   cursor: pointer;
+
+
+  &:hover {
+    background-color: #102bc3;
+    color: #ffffff;
+  }
 `;
 
 export const FondoWelcome = styled.div`
