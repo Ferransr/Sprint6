@@ -4,7 +4,7 @@ import Escena from './components/escenas/Escena'
 import Bienvenida from './components/escenas/welcome'
 import FondoImagenes from './components/escenas/fondoImagenes';
 import { imagenes } from './components/escenas/imagenes';
-import frases from './components/frases/frases.json'
+import {frases} from './components/frases/frases.tsx'
 import {ButtonsSelector} from "./components/styled-components/styled-div";
 
 const App = () => {
