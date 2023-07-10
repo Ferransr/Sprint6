@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 
 interface FondoImagenesProps {
   indiceImagen: number;
@@ -8,7 +8,7 @@ interface FondoImagenesProps {
 const FondoImagenes = (props: FondoImagenesProps) => {
   const { indiceImagen, imagenes } = props;
 
-  useEffect(() => {
+  const actualizarFondo = useCallback(() => {
     const imagenFondo = imagenes[indiceImagen % imagenes.length];
     document.body.style.backgroundImage = `url(./dist/assets/${imagenFondo})`;
     document.body.style.backgroundSize = "cover";
@@ -18,7 +18,12 @@ const FondoImagenes = (props: FondoImagenesProps) => {
     document.body.style.height = "100%";
   }, [indiceImagen, imagenes]);
 
+  useEffect(() => {
+    actualizarFondo();
+  }, [actualizarFondo]);
+
   return null;
 };
 
 export default FondoImagenes;
+// 
