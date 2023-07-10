@@ -10,7 +10,7 @@ const FondoImagenes = (props: FondoImagenesProps) => {
 
   const actualizarFondo = useCallback(() => {
     const imagenFondo = imagenes[indiceImagen % imagenes.length];
-    document.body.style.backgroundImage = `url(./dist/assets/${imagenFondo})`;
+    document.body.style.backgroundImage = `url(/Sprint6/src/assets/img/${imagenFondo})`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
