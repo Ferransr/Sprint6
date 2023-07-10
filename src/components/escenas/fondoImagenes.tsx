@@ -9,8 +9,11 @@ const FondoImagenes = (props: FondoImagenesProps) => {
   const { indiceImagen, imagenes } = props;
 
   useEffect(() => {
+    const baseUrl =
+      window.location.hostname === "ferransr.github.io" ? "/Sprint6" : "";
+
     const imagenFondo = imagenes[indiceImagen % imagenes.length];
-    document.body.style.backgroundImage = `url(../src/assets/img/${imagenFondo})`;
+    document.body.style.backgroundImage = `url(..${baseUrl}/src/assets/img/${imagenFondo})`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
