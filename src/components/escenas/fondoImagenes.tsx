@@ -14,8 +14,8 @@ const FondoImagenes = (props: FondoImagenesProps) => {
   const { indiceImagen } = props;
 
   useEffect(() => {
-    const imagenFondo = imagenes[indiceImagen % imagenes.length];
-    document.body.style.backgroundImage = `url(${imagenFondo})`;
+    const imagenFondo = imagenes[indiceImagen % imagenes.length].split('/').pop();
+    document.body.style.backgroundImage = `url(/Sprint6/dist/assets/${imagenFondo})`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
