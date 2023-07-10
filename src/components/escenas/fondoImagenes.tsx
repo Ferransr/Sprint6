@@ -1,29 +1,29 @@
-import { useEffect, useCallback } from "react";
+import { useEffect } from "react";
+import imagen1 from '../../assets/img/1.jpg';
+import imagen2 from '../../assets/img/2.jpg';
+import imagen3 from '../../assets/img/3.jpg';
+import imagen4 from '../../assets/img/4.jpg';
+
+const imagenes = [imagen1, imagen2, imagen3, imagen4];
 
 interface FondoImagenesProps {
   indiceImagen: number;
-  imagenes: string[];
 }
 
 const FondoImagenes = (props: FondoImagenesProps) => {
-  const { indiceImagen, imagenes } = props;
+  const { indiceImagen } = props;
 
-  const actualizarFondo = useCallback(() => {
+  useEffect(() => {
     const imagenFondo = imagenes[indiceImagen % imagenes.length];
-    document.body.style.backgroundImage = `url(/Sprint6/src/assets/img/${imagenFondo})`;
+    document.body.style.backgroundImage = `url(${imagenFondo})`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
     document.documentElement.style.height = "100%";
     document.body.style.height = "100%";
-  }, [indiceImagen, imagenes]);
-
-  useEffect(() => {
-    actualizarFondo();
-  }, [actualizarFondo]);
+  }, [indiceImagen]);
 
   return null;
 };
 
 export default FondoImagenes;
-// 
